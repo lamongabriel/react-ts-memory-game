@@ -1,0 +1,80 @@
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+}
+
+.creator {
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+h1 {
+  color: var(--color-text);
+  font-size: 5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+@media screen {
+}
+
+.buttons button,
+.buttons input {
+  color: var(--color-text);
+  text-transform: uppercase;
+  justify-content: center;
+  font-size: 2rem;
+  line-height: 1.025rem;
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: var(--card-bg);
+  border: solid 1px var(--color-text);
+}
+
+.buttons p {
+  color: var(--color-text);
+  font-size: 2rem;
+  text-align: right;
+}
+
+.buttons input {
+  padding: 1rem;
+  width: 25%;
+}
+
+.buttons input:focus {
+  outline: none;
+  transform: scale(1.1);
+}
